@@ -50,11 +50,7 @@
 
 - Users will be able to comment on blog posts.
 
-## 🚀 live-demo <a name="live-demo"></a>
-
-Coming soon
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<br>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -74,7 +70,7 @@ Clone this Repository to your desired folder:
 
 ```sh
 cd my-folder
-git clone git@github.com:jugosack/blog_app_rails.git
+git clone git@github.com:jugosack/blog-app-rails.git
 ```
 
 ### Install
