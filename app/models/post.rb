@@ -6,9 +6,8 @@ class Post < ApplicationRecord
   def update_posts_counter
     author.increment!(:posts_counter)
   end
-  
+
   def recent_comment
     comments.order(created_at: :desc).limit(5)
   end
-  
 end
