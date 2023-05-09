@@ -50,6 +50,8 @@
 
 - Users will be able to comment on blog posts.
 
+- Controllers specs
+
 <br>
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -133,8 +135,15 @@ Run tests with:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Add Styling to the Project
-- Add Authentication page
+- **Add Styling to the Project**
+- **Add Authentication page**
+- **Views.**
+- **Add forms.**
+- **Integration specs for Views and fix n+1 problems.**
+- **Add device.**
+- **Add authorization rules.**
+- **Add API endpoints.**
+- **Add API endpoints.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
