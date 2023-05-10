@@ -38,6 +38,9 @@ RSpec.describe 'Posts controller:', type: :request do
         it('renders the show template') do
           expect(response).to render_template(:show)
         end
+        it 'includes the placeholder text' do
+          expect(response.body).to include('this is my test post')
+        end
     end
   end
 end
