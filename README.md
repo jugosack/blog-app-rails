@@ -143,7 +143,6 @@ Run tests with:
 - **Add device.**
 - **Add authorization rules.**
 - **Add API endpoints.**
-- **Add API endpoints.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
