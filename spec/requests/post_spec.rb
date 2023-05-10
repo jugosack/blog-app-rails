@@ -17,7 +17,6 @@ RSpec.describe 'Posts controller:', type: :request do
           end   
 
           it('includes the placeholder text') do
-            # expect(response.body).to include("Posts by #{@test_user[:name]}")
              expect(response.body).to include('<h1>Posts</h1>')
              expect(response.body).to include('<title>BlogAppRails</title>')
              expect(response.body).to include('This is my first post')
