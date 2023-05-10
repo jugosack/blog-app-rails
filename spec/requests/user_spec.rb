@@ -11,6 +11,10 @@ RSpec.describe 'Users controller: ', type: :request do
         get users_path
         expect(response).to render_template(:index)
       end
+      it('includes the placeholder text') do
+        get users_path
+        expect(response.body).to include('Users')
+      end
     end
 end
 end
