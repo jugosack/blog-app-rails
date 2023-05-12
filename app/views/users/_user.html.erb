@@ -1,3 +1,4 @@
+<% if false %> 
 <div id="<%= dom_id user %>">
   <p>
     <strong>Name:</strong>
@@ -16,7 +17,26 @@
 
   <p>
     <strong>Posts counter:</strong>
-    <%= user.posts_counter %>
+    <%= user.posts.count %>
   </p>
-
 </div>
+<%end%>
+
+
+<%#############################################%>
+  <ul id="<%= dom_id user %>">
+    <li class='users_card'>
+        <div class="photo">
+          <img src="<%= user.photo %>" alt="<%= user.name %>">
+        </div>
+      <div class="frame">
+        <div class="name_bio">
+          <h2><%= link_to user.name, user %></h2>  
+        </div>
+
+        <div class='num_post'>
+        <p>Number of posts(<%= user.posts.count %>)</p>
+        <div>
+        </div>
+      </li>
+  </ul>

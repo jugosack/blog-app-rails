@@ -1,3 +1,4 @@
+<% if false %>
 <p style="color: green"><%= notice %></p>
 
 <h1>Users</h1>
@@ -11,4 +12,25 @@
   <% end %>
 </div>
 
+<%########################################################%>
 <%= link_to "New user", new_user_path %>
+<% end %>
+<h1 class='users_title'>Users</h1>
+  <ul>
+    <% @users.each do |user| %>
+    <li class='users_card'>
+        <div class="photo">
+          <img src="<%= user.photo %>" alt="<%= user.name %>">
+        </div>
+       <div class="frame">
+        <div class="name_bio">
+          <h2><%= link_to user.name, user %></h2>  
+        </div>
+
+        <div class='num_post'>
+        <p>Number of posts(<%= user.posts.count %>)</p>
+        <div>
+        </div>
+      </li>
+    <% end %>
+  </ul>

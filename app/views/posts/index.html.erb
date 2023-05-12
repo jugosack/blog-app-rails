@@ -1,3 +1,4 @@
+<%if false%>
 <p style="color: green"><%= notice %></p>
 
 <h1>Posts</h1>
@@ -12,3 +13,22 @@
 </div>
 
 <%= link_to "New post", new_post_path %>
+<%end%>
+<%##############################%>
+
+<section>
+<%= render 'users/user', user: @user %> 
+  <ul class='comment_post'>
+    <% if @user.posts.empty? %>
+      <li class='post'>This user has no posts yet!</li>
+    <% end %>
+
+    <% @user.posts.each_with_index do |post, index| %>
+      <li class='post'>
+        <%= render 'post', post: post %>
+
+         <%= render 'comments/comment', post: post, comment: post.recent_comment %>
+      </li>
+    <% end %>
+  </ul>
+</section>
