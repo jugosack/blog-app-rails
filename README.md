@@ -11,7 +11,6 @@
 - [📗 Table of Contents](#-table-of-contents)
 - [📖Rails Blog App](#rails-blog-app)
   - [Key Features ](#key-features-)
-  - [🚀 live-demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [SetUp](#setup)
