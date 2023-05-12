@@ -1,8 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @post %>
+<%= render 'comments/comment', post: @post, comment: @post.recent_comment %>
 
-<div>
+<div class='show_post'>
   <%= link_to "Edit this post", edit_post_path(@post) %> |
   <%= link_to "Back to posts", posts_path %>
 

@@ -1,7 +1,28 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @user %>
+<%##############################################%>
+<div class='bio'>
+    <h2>Bio</h2>
+    <p><%= @user.bio %></p>
+  </div>
 
+  <ul class='posts'>
+    <% if @user.posts.empty? %>
+      <li class='post border1'>This user has no posts yet!</li>
+    <% end %>
+
+    <% @user.recent_post.each_with_index do |post, index| %>
+      <li class='post border1'>
+        <%= render 'posts/post', post: post %>
+      </li>
+    <% end %>
+  </ul>
+
+  <% unless @user.posts.empty? %>
+    <div class='see-all'><%= link_to 'See all posts', user_posts_path(@user), class: 'border1' %></div>
+  <% end %>
+<%##################################################%>
 <div>
   <%= link_to "Edit this user", edit_user_path(@user) %> |
   <%= link_to "Back to users", users_path %>

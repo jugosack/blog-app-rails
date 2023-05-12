@@ -1,27 +1,41 @@
-<div id="<%= dom_id post %>">
+<ul id="<%= dom_id post %>">
+
+  <% if false %>
   <p>
     <strong>Author:</strong>
     <%= post.author_id %>
   </p>
+  <%end%>
+  
+ <li class="post_card">
 
-  <p>
-    <strong>Title:</strong>
+   <div class="post_title">
+   <p>
+    <strong>Post:</strong>
     <%= post.title %>
-  </p>
+   </p>
+  </div>
 
+ <div class="text">
   <p>
-    <strong>Text:</strong>
+    <%# <strong>Text:</strong> %>
     <%= post.text %>
   </p>
+ </div>
 
-  <p>
+ <div class="like_comment">
+ <div>
+   <p>
     <strong>Likes counter:</strong>
     <%= post.likes_counter %>
-  </p>
-
-  <p>
+   </p>
+  </div>
+ <div>
+   <p>
     <strong>Comments counter:</strong>
     <%= post.comments_counter %>
-  </p>
-
-</div>
+   </p>
+  </div>
+  </div>
+</li>
+</ul>

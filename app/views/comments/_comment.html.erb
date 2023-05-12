@@ -1,3 +1,5 @@
+
+<%if false%>
 <div id="<%= dom_id comment %>">
   <p>
     <strong>Author:</strong>
@@ -15,3 +17,21 @@
   </p>
 
 </div>
+<%end%>
+<%###################################%>
+<% if post.comments_counter == 0 %>
+  <div class='comments'>
+    <p>No comments yet!</p>
+  </div>
+<% end %>
+
+<% if post.comments_counter > 0 %>
+  <ul class='comments'>
+    <% comment.each do |comment| %>
+      <div class='comment'>
+        <div><%= comment.author.name %>:</div>
+        <div class='comment-box'><%= comment.text %></div>
+      </div>
+    <% end %>
+  </ul>
+<% end %>

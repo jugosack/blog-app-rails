@@ -3,11 +3,15 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
+    select_user
     @posts = Post.all
   end
 
   # GET /posts/1 or /posts/1.json
-  def show; end
+  def show
+    select_user
+    select_posts
+  end
 
   # GET /posts/new
   def new
@@ -65,5 +69,13 @@ class PostsController < ApplicationController
   # Only allow a list of trusted parameters through.
   def post_params
     params.require(:post).permit(:author_id, :title, :text, :likes_counter, :comments_counter)
+  end
+
+  def select_user
+    @user = User.find(params[:user_id])
+  end
+
+  def select_posts
+    @post = Post.find(params[:id])
   end
 end

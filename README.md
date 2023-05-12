@@ -11,7 +11,6 @@
 - [📗 Table of Contents](#-table-of-contents)
 - [📖Rails Blog App](#rails-blog-app)
   - [Key Features ](#key-features-)
-  - [🚀 live-demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [SetUp](#setup)
@@ -51,6 +50,10 @@
 - Users will be able to comment on blog posts.
 
 - Controllers specs
+
+- Views
+
+- Add Styling to the Project
 
 <br>
 
@@ -135,9 +138,7 @@ Run tests with:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Add Styling to the Project**
 - **Add Authentication page**
-- **Views.**
 - **Add forms.**
 - **Integration specs for Views and fix n+1 problems.**
 - **Add device.**
