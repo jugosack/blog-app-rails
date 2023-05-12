@@ -52,6 +52,10 @@
 
 - Controllers specs
 
+- Views
+
+- Add Styling to the Project
+
 <br>
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -135,9 +139,7 @@ Run tests with:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Add Styling to the Project**
 - **Add Authentication page**
-- **Views.**
 - **Add forms.**
 - **Integration specs for Views and fix n+1 problems.**
 - **Add device.**
