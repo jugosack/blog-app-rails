@@ -19,7 +19,7 @@ jobs:
       - name: Rubocop Report
         run: rubocop --color
         
-        stylelint:
+  stylelint:
     name: Stylelint
     runs-on: ubuntu-22.04
     steps:
