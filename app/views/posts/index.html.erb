@@ -18,6 +18,7 @@
 
 <section>
 <%= render 'users/user', user: @user %> 
+ <%= render 'shared/open_post_form', user: @user %>
   <ul class='comment_post'>
     <% if @user.posts.empty? %>
       <li class='post'>This user has no posts yet!</li>

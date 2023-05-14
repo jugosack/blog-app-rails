@@ -6,7 +6,7 @@
     <h2>Bio</h2>
     <p><%= @user.bio %></p>
   </div>
-
+  <%= render 'shared/open_post_form', user: @user %>
   <ul class='posts'>
     <% if @user.posts.empty? %>
       <li class='post border1'>This user has no posts yet!</li>
@@ -23,9 +23,11 @@
     <div class='see-all'><%= link_to 'See all posts', user_posts_path(@user), class: 'border1' %></div>
   <% end %>
 <%##################################################%>
+<%if false%>
 <div>
   <%= link_to "Edit this user", edit_user_path(@user) %> |
   <%= link_to "Back to users", users_path %>
 
   <%= button_to "Destroy this user", @user, method: :delete %>
 </div>
+<%end%>

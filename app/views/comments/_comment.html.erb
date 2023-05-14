@@ -27,7 +27,7 @@
 
 <% if post.comments_counter > 0 %>
   <ul class='comments'>
-    <% comment.each do |comment| %>
+    <% post.comments.each do |comment| %>
       <div class='comment'>
         <div><%= comment.author.name %>:</div>
         <div class='comment-box'><%= comment.text %></div>
@@ -35,3 +35,4 @@
     <% end %>
   </ul>
 <% end %>
+

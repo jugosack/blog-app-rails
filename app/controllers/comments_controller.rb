@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_action :find_user, only: [:create]
+  before_action :find_post, only: [:create]
   before_action :set_comment, only: %i[show edit update destroy]
 
   # GET /comments or /comments.json
@@ -7,7 +9,10 @@ class CommentsController < ApplicationController
   end
 
   # GET /comments/1 or /comments/1.json
-  def show; end
+  def show
+    @comment = Comment.find(params[:id])
+    @post = @comment.post
+  end
 
   # GET /comments/new
   def new
@@ -19,11 +24,14 @@ class CommentsController < ApplicationController
 
   # POST /comments or /comments.json
   def create
-    @comment = Comment.new(comment_params)
+    # @comment = Comment.new(comment_params)
+    comment = Comment.new(comment_params)
+    comment.author = current_user
+    comment.post = @post
 
     respond_to do |format|
-      if @comment.save
-        format.html { redirect_to comment_url(@comment), notice: 'Comment was successfully created.' }
+      if comment.save
+        format.html { redirect_to user_post_path(@user, @post), notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -56,6 +64,14 @@ class CommentsController < ApplicationController
   end
 
   private
+
+  def find_user
+    @user = User.find(params[:user_id])
+  end
+
+  def find_post
+    @post = Post.find(params[:post_id])
+  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_comment
