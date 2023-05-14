@@ -19,11 +19,16 @@ class LikesController < ApplicationController
 
   # POST /likes or /likes.json
   def create
-    @like = Like.new(like_params)
+    # @like = Like.new(like_params)
+    like = Like.new
+    post = Post.find(params[:post_id])
+    user = User.find(params[:user_id])
+    like.post = post
+    like.author = current_user
 
     respond_to do |format|
-      if @like.save
-        format.html { redirect_to like_url(@like), notice: 'Like was successfully created.' }
+      if like.save
+        format.html { redirect_to user_post_path(user, post), notice: 'Like was successfully created.' }
         format.json { render :show, status: :created, location: @like }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -36,7 +41,7 @@ class LikesController < ApplicationController
   def update
     respond_to do |format|
       if @like.update(like_params)
-        format.html { redirect_to like_url(@like), notice: 'Like was successfully updated.' }
+        format.html { redirect_to user_post_path(user, post), notice: 'Like was successfully updated.' }
         format.json { render :show, status: :ok, location: @like }
       else
         format.html { render :edit, status: :unprocessable_entity }
