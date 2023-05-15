@@ -11,22 +11,25 @@
     </div>
   <% end %>
 
-  <div>
+  <div class='comments_form'>
+    <div>
     <%= form.label :author_id, style: "display: block" %>
-    <%= form.text_field :author_id %>
-  </div>
+    <%= form.text_field :author_id ,placeholder: 'Author id'%>
+    </div>
 
-  <div>
+   <div>
     <%= form.label :post_id, style: "display: block" %>
-    <%= form.text_field :post_id %>
-  </div>
+    <%= form.text_field :post_id , placeholder: 'Post id'%>
+   </div>
 
-  <div>
+   <div>
     <%= form.label :text, style: "display: block" %>
     <%= form.text_area :text %>
-  </div>
+   </div>
 
-  <div>
+   <div>
     <%= form.submit %>
-  </div>
+   </div>
+
+   </div>
 <% end %>

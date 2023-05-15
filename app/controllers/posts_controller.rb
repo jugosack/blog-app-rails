@@ -6,13 +6,7 @@ class PostsController < ApplicationController
     select_user
     @posts = @user.posts
   end
-
-  # GET /posts/1 or /posts/1.json
-  def show
-    select_user
-    # select_posts
-   set_post
-  end
+  
 
   # GET /posts/new
   def new
@@ -29,14 +23,20 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if post.save
-        # format.html { redirect_to user_posts_path(current_user), notice: 'Post was successfully created.' }
         format.html { redirect_to "/users/#{current_user.id}", notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
+        format.html { redirect_to "/users/#{current_user.id}", notice: 'Post was not successfully created.' }
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def show
+    select_user
+    # select_posts
+   set_post
   end
 
   # PATCH/PUT /posts/1 or /posts/1.json
@@ -78,9 +78,4 @@ class PostsController < ApplicationController
     params.require(:post).permit(:author_id, :title, :text, :likes_counter, :comments_counter)
   end
 
-  
-
-  # def select_posts
-  #   @post = Post.find(params[:id])
-  # end
 end

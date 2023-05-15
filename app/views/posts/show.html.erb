@@ -2,7 +2,7 @@
 
 <%= render @post %>
 
-<p><%= @post.text %></p>
+<%# <p><%= @post.text %></p>
 <%= render 'shared/enteract', user: @user, post: @post %>
 <%= render 'comments/comment', post: @post, comment: @post.recent_comment%>
 <%# <%= render partial: 'comments/comment', locals: { comment: @comment, post: @post }  %>

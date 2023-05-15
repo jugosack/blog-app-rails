@@ -1,18 +1,6 @@
 class CommentsController < ApplicationController
   before_action :find_user, only: [:create]
   before_action :find_post, only: [:create]
-  before_action :set_comment, only: %i[show edit update destroy]
-
-  # GET /comments or /comments.json
-  def index
-    @comments = Comment.all
-  end
-
-  # GET /comments/1 or /comments/1.json
-  def show
-    @comment = Comment.find(params[:id])
-    @post = @comment.post
-  end
 
   # GET /comments/new
   def new
@@ -24,7 +12,6 @@ class CommentsController < ApplicationController
 
   # POST /comments or /comments.json
   def create
-    # @comment = Comment.new(comment_params)
     comment = Comment.new(comment_params)
     comment.author = current_user
     comment.post = @post
@@ -34,6 +21,7 @@ class CommentsController < ApplicationController
         format.html { redirect_to user_post_path(@user, @post), notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
       else
+        format.html { redirect_to user_post_path(@user, @post), notice: 'Comment was not successfully created.' }
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
