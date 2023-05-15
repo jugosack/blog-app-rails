@@ -1,7 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @user %>
-<%##############################################%>
+<%##################### START USER FORM #######################%>
 <div class='bio'>
     <h2>Bio</h2>
     <p><%= @user.bio %></p>
@@ -22,7 +22,7 @@
   <% unless @user.posts.empty? %>
     <div class='see-all'><%= link_to 'See all posts', user_posts_path(@user), class: 'border1' %></div>
   <% end %>
-<%##################################################%>
+<%######################## END OF USER FORM ##########################%>
 <%if false%>
 <div>
   <%= link_to "Edit this user", edit_user_path(@user) %> |
