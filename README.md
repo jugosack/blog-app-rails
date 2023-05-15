@@ -55,6 +55,8 @@
 
 - Add Styling to the Project
 
+- Add forms
+
 <br>
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -139,7 +141,6 @@ Run tests with:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - **Add Authentication page**
-- **Add forms.**
 - **Integration specs for Views and fix n+1 problems.**
 - **Add device.**
 - **Add authorization rules.**
