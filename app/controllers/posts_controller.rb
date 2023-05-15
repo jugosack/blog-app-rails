@@ -6,7 +6,6 @@ class PostsController < ApplicationController
     select_user
     @posts = @user.posts
   end
-  
 
   # GET /posts/new
   def new
@@ -36,7 +35,7 @@ class PostsController < ApplicationController
   def show
     select_user
     # select_posts
-   set_post
+    set_post
   end
 
   # PATCH/PUT /posts/1 or /posts/1.json
@@ -77,5 +76,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:author_id, :title, :text, :likes_counter, :comments_counter)
   end
-
 end
