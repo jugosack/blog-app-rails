@@ -3,11 +3,13 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
-    @users = User.all
+    @users = User.all.order(updated_at: :asc)
   end
 
   # GET /users/1 or /users/1.json
-  def show; end
+  def show
+    set_user
+  end
 
   # GET /users/new
   def new

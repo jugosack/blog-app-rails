@@ -4,13 +4,7 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     select_user
-    @posts = Post.all
-  end
-
-  # GET /posts/1 or /posts/1.json
-  def show
-    select_user
-    select_posts
+    @posts = @user.posts
   end
 
   # GET /posts/new
@@ -23,17 +17,24 @@ class PostsController < ApplicationController
 
   # POST /posts or /posts.json
   def create
-    @post = Post.new(post_params)
-
+    post = Post.new(post_params)
+    post.author = current_user
     respond_to do |format|
-      if @post.save
-        format.html { redirect_to post_url(@post), notice: 'Post was successfully created.' }
+      if post.save
+        format.html { redirect_to "/users/#{current_user.id}", notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
+        format.html { redirect_to "/users/#{current_user.id}", notice: 'Post was not successfully created.' }
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def show
+    select_user
+    # select_posts
+    set_post
   end
 
   # PATCH/PUT /posts/1 or /posts/1.json
@@ -61,6 +62,10 @@ class PostsController < ApplicationController
 
   private
 
+  def select_user
+    @user = User.find(params[:user_id])
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_post
     @post = Post.find(params[:id])
@@ -68,14 +73,6 @@ class PostsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def post_params
-    params.require(:post).permit(:author_id, :title, :text, :likes_counter, :comments_counter)
-  end
-
-  def select_user
-    @user = User.find(params[:user_id])
-  end
-
-  def select_posts
-    @post = Post.find(params[:id])
+    params.require(:post).permit(:title, :text)
   end
 end

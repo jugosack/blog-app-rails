@@ -1,12 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @user %>
-<%##############################################%>
+<%##################### START USER FORM #######################%>
 <div class='bio'>
     <h2>Bio</h2>
     <p><%= @user.bio %></p>
   </div>
-
+  <%= render 'shared/open_post_form', user: @user %>
   <ul class='posts'>
     <% if @user.posts.empty? %>
       <li class='post border1'>This user has no posts yet!</li>
@@ -15,17 +15,22 @@
     <% @user.recent_post.each_with_index do |post, index| %>
       <li class='post border1'>
         <%= render 'posts/post', post: post %>
+         <div class=add_new_comm>
+  <a href="<%= new_user_post_comment_path(current_user, post) %>" class="button button-wide">Add new comment</a>
+</div>
       </li>
     <% end %>
   </ul>
 
   <% unless @user.posts.empty? %>
-    <div class='see-all'><%= link_to 'See all posts', user_posts_path(@user), class: 'border1' %></div>
+    <div class='see-all'><%= link_to 'See all posts', user_posts_path(@user) %></div>
   <% end %>
-<%##################################################%>
+<%######################## END OF USER FORM ##########################%>
+<%if false%>
 <div>
   <%= link_to "Edit this user", edit_user_path(@user) %> |
   <%= link_to "Back to users", users_path %>
 
   <%= button_to "Destroy this user", @user, method: :delete %>
 </div>
+<%end%>
