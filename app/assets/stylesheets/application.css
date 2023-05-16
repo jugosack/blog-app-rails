@@ -271,3 +271,90 @@ ul {
 .actions form.like-form input[type="submit"]:hover {
   background-color: #45a049;
 }
+.new-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #337ab7;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-create {
+  /* Additional styles specific to the "btn-create" class */
+  /* Add your custom styles here */
+}
+
+.btn:hover {
+  background-color: #135eaa;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.see-all {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.see-all a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #337ab7;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.see-all a:hover {
+  background-color: #135eaa;
+}
+
+.see-all a:visited {
+  color: #fff;
+}
+
+
+  .add_new_comm {
+    margin-top: 10px;
+    text-align: right;
+  }
+
+  .add_new_comm a {
+    display: inline-block;
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .add_new_comm a:hover {
+    background-color: #ff4d4d;
+  }
+

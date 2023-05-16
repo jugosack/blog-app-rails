@@ -11,10 +11,6 @@
     </div>
   <% end %>
 <div class = 'post_form'>
-  <div>
-    <%= form.label :author_id, style: "display: block" %>
-    <%= form.text_field :author_id ,placeholder: 'Author id'%>
-  </div>
 
   <div>
     <%= form.label :title, style: "display: block" %>
@@ -26,15 +22,6 @@
     <%= form.text_area :text %>
   </div>
 
-  <div>
-    <%= form.label :likes_counter, style: "display: block" %>
-    <%= form.number_field :likes_counter, placeholder: 'add number' %>
-  </div>
-
-  <div>
-    <%= form.label :comments_counter, style: "display: block" %>
-    <%= form.number_field :comments_counter, placeholder: 'add number' %>
-  </div>
 
   <div>
     <%= form.submit %>

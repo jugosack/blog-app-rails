@@ -8,6 +8,13 @@ class Post < ApplicationRecord
   validates :likes_counter, numericality: { only_integer: true }, comparison: { greater_than_or_equal_to: 0 }
   validates :comments_counter, numericality: { only_integer: true }, comparison: { greater_than_or_equal_to: 0 }
 
+  def initialize(attributes = {})
+    super
+    self.comments_counter ||= 0
+    self.likes_counter ||= 0
+  end
+
+
   def update_posts_counter
     author.increment!(:posts_counter)
   end
