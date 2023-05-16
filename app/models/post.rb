@@ -14,7 +14,6 @@ class Post < ApplicationRecord
     self.likes_counter ||= 0
   end
 
-
   def update_posts_counter
     author.increment!(:posts_counter)
   end
