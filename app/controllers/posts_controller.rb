@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     select_user
-    @posts = @user.posts
+    @posts = @user.posts.includes(:comments)
   end
 
   # GET /posts/new
@@ -33,8 +33,8 @@ class PostsController < ApplicationController
 
   def show
     select_user
-    # select_posts
-    set_post
+    # set_post
+    @comments = @post.comments.includes(:author)
   end
 
   # PATCH/PUT /posts/1 or /posts/1.json
