@@ -16,6 +16,21 @@ RSpec.describe 'Posts', type: :system, js: true do
 
       visit user_posts_path(@messi)
     end
+
+    it 'should render user profile information' do
+      expect(page).to have_css("img[src*='messi.jpg']")
+      expect(page).to have_content(@messi.name)
+      expect(page).to have_content("Number of posts(3)")
+    end
+
+
+    it 'should render user posts' do
+      expect(page).to have_css('.post', count: 3)
+      @messi.posts.each do |post|
+        expect(page).to have_content(post.title)
+      end
+    end
+
     it 'should render post information' do
       @messi.posts.each do |post|
         expect(page).to have_content(post.title)
@@ -23,12 +38,20 @@ RSpec.describe 'Posts', type: :system, js: true do
         expect(page).to have_content(post.comments_counter)
       end
     end
+
     it 'should render post interactions counts' do
       @messi.posts.each do |_post|
         expect(page).to have_content('Comments counter')
         expect(page).to have_content('Likes counter')
       end
     end
+
+    it 'should render the first comments on a post' do
+      @messi.posts.each do |post|
+        expect(page).to have_content(post.comments.first)
+      end
+    end
+
     it 'displays a message when there are no comments' do
       expect(page).to have_css('.comments', text: 'No comments yet!')
     end
