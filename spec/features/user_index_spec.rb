@@ -2,6 +2,7 @@ require 'rails_helper'
 require 'capybara/rspec'
 RSpec.describe 'User flow', type: :feature do
   before(:each) do
+    # Preparation for test
   end
   describe 'User index page' do
     it 'displays the username of all other users' do

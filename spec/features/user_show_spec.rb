@@ -2,7 +2,7 @@ require 'rails_helper'
 require 'capybara/rspec'
 RSpec.describe 'User flow', type: :feature do
   before(:each) do
-    
+    # Preparation for test
   end
   describe 'User show page' do
     let(:user) { User.first }

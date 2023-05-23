@@ -2,17 +2,14 @@ require 'rails_helper'
 require 'capybara/rspec'
 
 RSpec.describe 'Posts', type: :system, js: true do
-
   describe 'post show page' do
     before(:example) do
-      @messi = User.create(name: 'Messi', photo: 'https://i.imgur.com/messi.jpg',bio: 'I love Barcelona and Argentina.')
-      @cr7 = User.create(name: 'Cristiano', photo: 'https://i.imgur.com/cr7.jpg',bio: 'I am ubleivable inside the pitch.')
+      @messi = User.create(name: 'Messi', photo: 'https://i.imgur.com/messi.jpg', bio: 'I love Barcelona and Argentina.')
+      @cr7 = User.create(name: 'Cristiano', photo: 'https://i.imgur.com/cr7.jpg', bio: 'I am ubleivable inside the pitch.')
 
       @messi_post = Post.create(title: 'First Post', text: 'This is the first post.', author: @messi)
 
-   
       @comment2 = Comment.create(text: "I'm not feeling too good, G!.", author: @messi, post: @messi_post)
-     
 
       visit user_post_path(@messi, @messi_post)
     end
@@ -42,5 +39,5 @@ RSpec.describe 'Posts', type: :system, js: true do
         expect(page).to have_content(comment.text)
       end
     end
-end
+  end
 end

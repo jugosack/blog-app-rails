@@ -20,9 +20,8 @@ RSpec.describe 'Posts', type: :system, js: true do
     it 'should render user profile information' do
       expect(page).to have_css("img[src*='messi.jpg']")
       expect(page).to have_content(@messi.name)
-      expect(page).to have_content("Number of posts(3)")
+      expect(page).to have_content('Number of posts(3)')
     end
-
 
     it 'should render user posts' do
       expect(page).to have_css('.post', count: 3)
