@@ -93,5 +93,4 @@ RSpec.configure do |config|
   #   Kernel.srand config.seed
 end
 
-
 # Capybara.default_driver = :selenium_chrome

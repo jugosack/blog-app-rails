@@ -13,7 +13,6 @@ RSpec.describe 'Posts', type: :system, js: true do
       @messi_post4 = Post.create(title: 'Fourth Post', text: 'This is the fourth post.', author: @messi)
 
       @comment2 = Comment.create(text: "I'm not feeling too good, G!.", author: @messi, post: @messi_post1)
-   
 
       visit user_posts_path(@messi)
     end
@@ -25,20 +24,19 @@ RSpec.describe 'Posts', type: :system, js: true do
       end
     end
     it 'should render post interactions counts' do
-      @messi.posts.each do |post|
-        expect(page).to have_content("Comments counter")
-        expect(page).to have_content("Likes counter")
+      @messi.posts.each do |_post|
+        expect(page).to have_content('Comments counter')
+        expect(page).to have_content('Likes counter')
       end
     end
     it 'displays a message when there are no comments' do
       expect(page).to have_css('.comments', text: 'No comments yet!')
     end
-  
+
     it 'displays an add comment button' do
-      @messi.posts.each do |post|
+      @messi.posts.each do |_post|
         expect(page).to have_link('Add new comment')
       end
     end
   end
 end
-

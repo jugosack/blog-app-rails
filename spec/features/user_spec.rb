@@ -15,8 +15,8 @@ RSpec.describe 'User flow', type: :feature do
     end
     it 'displays the number of posts each user has written' do
       visit root_path
-      User.all.each do |user|
-        expect(page).to have_content("Number of posts")
+      User.all.each do |_user|
+        expect(page).to have_content('Number of posts')
       end
     end
     it 'redirects to the user show page when clicking on a user' do
@@ -55,4 +55,3 @@ RSpec.describe 'User flow', type: :feature do
     end
   end
 end
-
