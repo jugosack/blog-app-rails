@@ -1,18 +1,20 @@
+
 <ul id="<%= dom_id post %>">
 
-  <% if false %>
   <p>
     <strong>Author:</strong>
-    <%= post.author_id %>
+    <%= post.author.name %>
   </p>
-  <%end%>
   
  <li class="post_card">
 
    <div class="post_title">
    <p>
+   
     <strong>Post:</strong>
+    <%= link_to user_post_path(post.author, post) do %>
     <%= post.title %>
+      <%end%>
    </p>
   </div>
 
@@ -38,3 +40,4 @@
   </div>
 </li>
 </ul>
+

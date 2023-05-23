@@ -133,6 +133,12 @@ Run tests with:
 - Twitter: [twitter](https://twitter.com/Jugoslav_A)
 - Facebook: [facebook](https://www.facebook.com/jugoslav.ackoski/)
 
+👤 **Mladan Ilic**
+
+- GitHub: [@Ilic](https://github.com/djo1975)
+- Twitter: [@Ilic](https://twitter.com/MladanIlic)
+- LinkedIn: [@Ilic] (https://www.linkedin.com/in/mladanilic/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -166,10 +172,7 @@ If you like the project, give it a star ⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank...
-[Microverse](https://www.microverse.org/) for the oppotunity
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+I would like to thank Microverse
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
