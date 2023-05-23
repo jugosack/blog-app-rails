@@ -23,7 +23,7 @@
   </ul>
 
   <% unless @user.posts.empty? %>
-    <div class='see-all'><%= link_to 'See all posts', user_posts_path(@user) %></div>
+    <div class='see-all'><button><%= link_to 'See all posts', user_posts_path(@user) %><button></div>
   <% end %>
 <%######################## END OF USER FORM ##########################%>
 <%if false%>

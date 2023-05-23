@@ -40,10 +40,10 @@ RSpec.describe 'User post index page:', type: :feature do
     visit user_posts_path(@user1.id)
     expect(page).to have_content(@post1.title)
   end
-  # scenario 'I can see the first comments on a post.' do
-  #   visit user_posts_path(@user1.id)
-  #   expect(page).to have_content(@post1.recent_comments.first.text)
-  # end
+  scenario 'I can see the first comments on a post.' do
+    visit user_posts_path(@user1.id)
+    expect(page).to have_content(@post1.recent_comment.first.text)
+  end
   scenario 'I can see how many comments a post has.' do
     visit user_posts_path(@user1.id)
     expect(page).to have_content(@post1.comments.count)
