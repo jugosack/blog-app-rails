@@ -42,20 +42,15 @@
 ## Key Features <a name="key-features"></a>
 
 - Registered users will be able to create new blog posts.
-
 - Users will be able to view blog posts on the application's home page.
-
 - Users will be able to delete their own blog posts.
-
 - Users will be able to comment on blog posts.
-
 - Controllers specs
-
 - Views
-
 - Add Styling to the Project
-
 - Add forms
+- Integration specs for Views and fix n+1 problems.
+- Add device.
 
 <br>
 
@@ -147,8 +142,6 @@ Run tests with:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - **Add Authentication page**
-- **Integration specs for Views and fix n+1 problems.**
-- **Add device.**
 - **Add authorization rules.**
 - **Add API endpoints.**
 
