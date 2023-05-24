@@ -132,38 +132,103 @@ ul {
   margin-bottom: 10px;
 }
 
-.post_new form label {
+/* Style for the form labels */
+.devise_new_reg label {
   display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Style for the container div */
+.devise_new_reg {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.actions {
+  margin-bottom: 20px;
+}
+
+/* Style for the form fields */
+.devise_new_reg input[type="text"],
+.devise_new_reg input[type="email"],
+.devise_new_reg input[type="password"],
+.devise_new_reg textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Style for the user label */
+.devise_new_reg .user_field {
   font-weight: bold;
 }
 
-.post_new form input[type="text"],
-.post_new form textarea,
-.post_new form input[type="number"] {
+/* Style for the user input field */
+.devise_new_reg .user_input {
   width: 100%;
-  padding: 5px;
-  font-size: 14px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-.post_new form input[type="submit"] {
+/* Style for the form actions */
+.devise_new_reg .actions {
+  text-align: right;
+  margin-top: 10px;
+}
+
+/* Style for the submit button */
+.devise_new_reg input[type="submit"] {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #4caf50;
   color: #fff;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.new_comment .comments_form input[type="submit"] {
+/* Style for error messages */
+.devise_new_reg .error-messages {
+  color: #f00;
+  margin-bottom: 10px;
+}
+
+/* Style for the container div */
+.devise_link_shared {
+  margin-top: 20px;
+}
+
+/* Style for the links */
+.devise_link_shared a {
+  display: block;
+  margin-bottom: 10px;
+  color: #00f;
+  text-decoration: none;
+}
+
+/* Style for the buttons */
+.devise_link_shared button {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
   background-color: #4caf50;
-  color: white;
-  padding: 8px 12px;
+  color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
+  text-decoration: none;
   cursor: pointer;
 }
 
-.post_new form input[type="submit"]:hover {
-  background-color: #0056b3;
+/* Style for the buttons on hover */
+.devise_link_shared button:hover {
+  background-color: #45a049;
 }
 
 .post_new a {
@@ -204,6 +269,118 @@ ul {
   letter-spacing: 1px;
   transition: background-color 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the last link/button without margin bottom */
+.devise_link_shared a:last-child,
+.devise_link_shared button:last-child {
+  margin-bottom: 0;
+}
+
+/* Style for the container */
+.devise_new_session {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style for the form labels */
+.devise_new_session label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Style for the form fields */
+.devise_new_session input[type="email"],
+.devise_new_session input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Style for the remember me checkbox */
+.devise_new_session input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Style for the form actions */
+.devise_new_session .actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Style for the submit button */
+.devise_new_session input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Style for the error message container */
+.devise_error_shared {
+  margin-bottom: 20px;
+}
+
+/* Style for the error message heading */
+.devise_error_shared h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style for the error message list */
+.devise_error_shared ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+/* Style for each error message item */
+.devise_error_shared li {
+  margin-bottom: 5px;
+}
+
+.post_new form label {
+  display: block;
+  font-weight: bold;
+}
+
+.post_new form input[type="text"],
+.post_new form textarea,
+.post_new form input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.post_new form input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.new_comment .comments_form input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.post_new form input[type="submit"]:hover {
+  background-color: #0056b3;
 }
 
 .post_new a:hover {
@@ -259,10 +436,6 @@ ul {
 
 .new_comment a:hover {
   background-color: #45a049;
-}
-
-.actions {
-  margin-bottom: 20px;
 }
 
 .actions a.btn {
@@ -342,176 +515,4 @@ ul {
 
 .add_new_comm a:hover {
   background-color: #ff4d4d;
-}
-
-/* Style for the container div */
-.devise_new_reg {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-/* Style for the form labels */
-.devise_new_reg label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-/* Style for the form fields */
-.devise_new_reg input[type="text"],
-.devise_new_reg input[type="email"],
-.devise_new_reg input[type="password"],
-.devise_new_reg textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-/* Style for the user label */
-.devise_new_reg .user_field {
-  font-weight: bold;
-}
-
-/* Style for the user input field */
-.devise_new_reg .user_input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-/* Style for the form actions */
-.devise_new_reg .actions {
-  text-align: right;
-  margin-top: 10px;
-}
-
-/* Style for the submit button */
-.devise_new_reg input[type="submit"] {
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Style for error messages */
-.devise_new_reg .error-messages {
-  color: #ff0000;
-  margin-bottom: 10px;
-}
-
-/* Style for the container div */
-.devise_link_shared {
-  margin-top: 20px;
-}
-
-/* Style for the links */
-.devise_link_shared a {
-  display: block;
-  margin-bottom: 10px;
-  color: #0000FF;
-  text-decoration: none;
-}
-
-/* Style for the buttons */
-.devise_link_shared button {
-  display: block;
-  margin-bottom: 10px;
-  padding: 10px;
-  background-color: #4CAF50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Style for the buttons on hover */
-.devise_link_shared button:hover {
-  background-color: #45a049;
-}
-
-/* Style for the last link/button without margin bottom */
-.devise_link_shared a:last-child,
-.devise_link_shared button:last-child {
-  margin-bottom: 0;
-}
-/* Style for the container */
-.devise_new_session {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-/* Style for the form labels */
-.devise_new_session label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-/* Style for the form fields */
-.devise_new_session input[type="email"],
-.devise_new_session input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-/* Style for the remember me checkbox */
-.devise_new_session input[type="checkbox"] {
-  margin-right: 5px;
-}
-
-/* Style for the form actions */
-.devise_new_session .actions {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* Style for the submit button */
-.devise_new_session input[type="submit"] {
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-/* Style for the error message container */
-.devise_error_shared {
-  margin-bottom: 20px;
-}
-
-/* Style for the error message heading */
-.devise_error_shared h2 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-/* Style for the error message list */
-.devise_error_shared ul {
-  list-style: disc;
-  padding-left: 20px;
-}
-
-/* Style for each error message item */
-.devise_error_shared li {
-  margin-bottom: 5px;
 }
