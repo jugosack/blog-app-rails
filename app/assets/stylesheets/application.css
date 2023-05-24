@@ -231,6 +231,77 @@ ul {
   background-color: #45a049;
 }
 
+/* Style for the submit button */
+.devise_new_session input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Style for the container */
+.devise_new_confirmation {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style for the form labels */
+.devise_new_confirmation label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Style for the form fields */
+.devise_new_confirmation input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Style for the form actions */
+.devise_new_confirmation .actions {
+  display: flex;
+  justify-content: center;
+}
+
+/* Style for the submit button */
+.devise_new_confirmation input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.post_new form input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style for the submit button on hover */
+.devise_new_confirmation input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Style for error messages */
+.devise_new_confirmation .error-messages {
+  color: #f00;
+  margin-bottom: 10px;
+}
+
 .post_new a {
   display: inline-block;
   margin-top: 10px;
@@ -315,16 +386,6 @@ ul {
   flex-wrap: wrap;
 }
 
-/* Style for the submit button */
-.devise_new_session input[type="submit"] {
-  padding: 10px 20px;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-}
 
 /* Style for the error message container */
 .devise_error_shared {
@@ -360,14 +421,6 @@ ul {
   width: 100%;
   padding: 5px;
   font-size: 14px;
-}
-
-.post_new form input[type="submit"] {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
 }
 
 .new_comment .comments_form input[type="submit"] {
