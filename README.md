@@ -27,7 +27,7 @@
 
 # 📖<a name="about-project">Rails Blog App</a>
 
-> "Rails Blog App" This project involves building a blog application using Ruby on Rails with the ability to create & view blog posts, commenting, like functionality. The app use PostgreSQL as its database management system. The goal is to create a user-friendly and responsive web application that allows users to easily create and share their blog posts.
+> "Rails Blog App" This project involves building a blog application using Ruby on Rails with the ability to create & view blog posts, commenting, like functionality. The app use PostgreSQL as its database management system. The goal is to create a user-friendly and responsive web application that allows users to easily create and share their blog posts. Added Devise to allow users to make requests.
 
 <details>
   <summary>Tech stacks</summary>
@@ -42,20 +42,15 @@
 ## Key Features <a name="key-features"></a>
 
 - Registered users will be able to create new blog posts.
-
 - Users will be able to view blog posts on the application's home page.
-
 - Users will be able to delete their own blog posts.
-
 - Users will be able to comment on blog posts.
-
 - Controllers specs
-
 - Views
-
 - Add Styling to the Project
-
 - Add forms
+- Integration specs for Views and fix n+1 problems.
+- Add device.
 
 <br>
 
@@ -147,8 +142,6 @@ Run tests with:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - **Add Authentication page**
-- **Integration specs for Views and fix n+1 problems.**
-- **Add device.**
 - **Add authorization rules.**
 - **Add API endpoints.**
 
