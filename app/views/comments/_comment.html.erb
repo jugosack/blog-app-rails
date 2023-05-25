@@ -31,6 +31,9 @@
       <div class='comment'>
         <div><%= comment.author.name %>:</div>
         <div class='comment-box'><%= comment.text %></div>
+        
+        <%############## DELETE BUTTON COMMENT #####################%>
+          <%= render 'shared/delete_btn', object: comment, path: user_post_comment_path(@user, post, comment) %>
       </div>
     <% end %>
   </ul>

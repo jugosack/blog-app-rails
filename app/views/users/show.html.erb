@@ -1,5 +1,3 @@
-<p style="color: green"><%= notice %></p>
-
 <%= render @user %>
 <%##################### START USER FORM #######################%>
 <div class='bio'>
@@ -15,6 +13,11 @@
     <% @user.recent_post.each_with_index do |post, index| %>
       <li class='post border1'>
         <%= render 'posts/post', post: post %>
+   <%###################### DELETE POST BUTTON ########################%>
+     <span>
+      <%= render 'shared/delete_btn', object: post, path: user_post_path(@user, post) %>
+    </span>
+ <%###################### ADD COMMENT BUTTON ########################%>
          <div class=add_new_comm>
   <a href="<%= new_user_post_comment_path(current_user, post) %>" class="button button-wide">Add new comment</a>
 </div>
@@ -23,7 +26,7 @@
   </ul>
 
   <% unless @user.posts.empty? %>
-    <div class='see-all'><button><%= link_to 'See all posts', user_posts_path(@user) %><button></div>
+    <div class='see-all'><button><%= link_to 'See all posts', user_posts_path(@user) %></button></div>
   <% end %>
 <%######################## END OF USER FORM ##########################%>
 <%if false%>

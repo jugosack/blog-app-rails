@@ -51,6 +51,7 @@
 - Add forms
 - Integration specs for Views and fix n+1 problems.
 - Add device.
+- Add authorization rules.
 
 <br>
 
@@ -126,14 +127,14 @@ Run tests with:
 - GitHub: [@github](https://github.com/jugosack)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/jugoslavachkoski/)
 - Twitter: [twitter](https://twitter.com/Jugoslav_A)
-- Facebook: [facebook](https://www.facebook.com/jugoslav.ackoski/)
+
 
 👤 **Mladan Ilic**
 
 - GitHub: [@Ilic](https://github.com/djo1975)
 - Twitter: [@Ilic](https://twitter.com/MladanIlic)
 - LinkedIn: [@Ilic] (https://www.linkedin.com/in/mladanilic/)
-
+- Facebook: [facebook](https://www.facebook.com/jugoslav.ackoski/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,7 +143,6 @@ Run tests with:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - **Add Authentication page**
-- **Add authorization rules.**
 - **Add API endpoints.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
