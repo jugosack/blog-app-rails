@@ -126,7 +126,7 @@ Run tests with:
 - GitHub: [@github](https://github.com/jugosack)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/jugoslavachkoski/)
 - Twitter: [twitter](https://twitter.com/Jugoslav_A)
-- Facebook: [facebook](https://www.facebook.com/jugoslav.ackoski/)
+
 
 👤 **Mladan Ilic**
 
