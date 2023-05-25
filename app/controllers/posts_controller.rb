@@ -55,13 +55,6 @@ class PostsController < ApplicationController
   def destroy
     select_user
     set_post
-
-    # @post.destroy
-
-    # respond_to do |format|
-    #   format.html { redirect_to user_posts_path(current_user), notice: 'Post was successfully destroyed.' }
-    #   format.json { head :no_content }
-    # end
     if @post.destroy
       redirect_to user_posts_path(current_user), notice: 'Post deleted'
     else
