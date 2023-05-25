@@ -51,6 +51,7 @@
 - Add forms
 - Integration specs for Views and fix n+1 problems.
 - Add device.
+- Add authorization rules.
 
 <br>
 
@@ -142,7 +143,6 @@ Run tests with:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - **Add Authentication page**
-- **Add authorization rules.**
 - **Add API endpoints.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
