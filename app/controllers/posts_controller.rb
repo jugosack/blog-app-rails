@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   before_action :set_post, only: %i[show edit update destroy]
 
   # GET /posts or /posts.json
@@ -52,11 +53,19 @@ class PostsController < ApplicationController
 
   # DELETE /posts/1 or /posts/1.json
   def destroy
-    @post.destroy
+    select_user
+    set_post
+    
+    # @post.destroy
 
-    respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
-      format.json { head :no_content }
+    # respond_to do |format|
+    #   format.html { redirect_to user_posts_path(current_user), notice: 'Post was successfully destroyed.' }
+    #   format.json { head :no_content }
+    # end
+    if @post.destroy
+      redirect_to user_posts_path(current_user), notice: 'Post deleted'
+    else
+      redirect_to user_posts_path(current_user), alert: 'Post not deleted'
     end
   end
 

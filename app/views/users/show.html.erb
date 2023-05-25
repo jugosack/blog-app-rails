@@ -15,6 +15,11 @@
     <% @user.recent_post.each_with_index do |post, index| %>
       <li class='post border1'>
         <%= render 'posts/post', post: post %>
+        
+        <span>
+      <%= render 'shared/delete_btn', object: post, path: user_post_path(@user, post) %>
+    </span>
+
          <div class=add_new_comm>
   <a href="<%= new_user_post_comment_path(current_user, post) %>" class="button button-wide">Add new comment</a>
 </div>
