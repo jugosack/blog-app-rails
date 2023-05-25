@@ -55,7 +55,7 @@ class PostsController < ApplicationController
   def destroy
     select_user
     set_post
-    
+
     # @post.destroy
 
     # respond_to do |format|
