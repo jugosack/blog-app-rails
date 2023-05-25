@@ -45,8 +45,6 @@ class CommentsController < ApplicationController
   def destroy
     find_post
     @comment = @post.comments.find(params[:id])
-
-
     respond_to do |format|
      if @comment.destroy
       format.html { redirect_to user_post_path(@post.author, @post), notice: 'Comment was successfully destroyed.' }
@@ -55,6 +53,7 @@ class CommentsController < ApplicationController
       redirect_to user_post_path(@post.author, @post), alert: 'Comment not deleted.'
     end
   end
+end
 
   private
 
