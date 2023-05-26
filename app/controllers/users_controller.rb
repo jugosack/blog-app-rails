@@ -1,14 +1,23 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
+  # before_action :set_user, only: %i[show]
 
   # GET /users or /users.json
   def index
     @users = User.includes(:posts).order(updated_at: :asc)
+    respond_to do |format|
+      format.html
+      format.json { render json: @users }
+    end
   end
 
   # GET /users/1 or /users/1.json
   def show
-    set_user
+    # set_user
+    respond_to do |format|
+      format.html
+      format.json { render json: @user }
+    end
   end
 
   # GET /users/new

@@ -1,11 +1,16 @@
 class PostsController < ApplicationController
   load_and_authorize_resource
-  before_action :set_post, only: %i[show edit update destroy]
+  before_action :select_user, only: %i[index show destroy]
+  before_action :set_post, only: %i[show destroy]
 
   # GET /posts or /posts.json
   def index
-    select_user
+    # select_user
     @posts = @user.posts.includes(:comments)
+    respond_to do |format|
+      format.html
+      format.json { render json: @posts }
+    end
   end
 
   # GET /posts/new
@@ -33,9 +38,9 @@ class PostsController < ApplicationController
   end
 
   def show
-    select_user
-    # set_post
-    @comments = @post.comments.includes(:author)
+    # select_user
+    # # set_post
+    # @comments = @post.comments.includes(:author)
   end
 
   # PATCH/PUT /posts/1 or /posts/1.json
@@ -53,8 +58,8 @@ class PostsController < ApplicationController
 
   # DELETE /posts/1 or /posts/1.json
   def destroy
-    select_user
-    set_post
+    # select_user
+    # set_post
     if @post.destroy
       redirect_to user_posts_path(current_user), notice: 'Post deleted'
     else

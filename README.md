@@ -1,5 +1,7 @@
 <a name="readme-top"></a>
-
+<div align="center">
+  <img src="./images/Untitled.png" width="140" height="auto" />
+</div>
 <div align="center">
   <h1>Rails Blog App</h1>
   <br/>
@@ -52,6 +54,8 @@
 - Integration specs for Views and fix n+1 problems.
 - Add device.
 - Add authorization rules.
+- Add Authentication page.
+- Add API endpoints.
 
 <br>
 
@@ -142,8 +146,7 @@ Run tests with:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Add Authentication page**
-- **Add API endpoints.**
+- **Improving application styling**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
