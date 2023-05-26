@@ -1,6 +1,12 @@
 class CommentsController < ApplicationController
-  before_action :find_user, only: [:create]
-  before_action :find_post, only: [:create]
+ 
+  before_action :find_user, only: %i[index create]
+  before_action :find_post, only: %i[index create destroy]
+
+  def index
+    @comments = @post.comments
+    render json: @comments
+  end
 
   # GET /comments/new
   def new
@@ -19,7 +25,7 @@ class CommentsController < ApplicationController
     respond_to do |format|
       if comment.save
         format.html { redirect_to user_post_path(@user, @post), notice: 'Comment was successfully created.' }
-        format.json { render :show, status: :created, location: @comment }
+        format.json { render json: comment }
       else
         format.html { redirect_to user_post_path(@user, @post), notice: 'Comment was not successfully created.' }
         format.html { render :new, status: :unprocessable_entity }
@@ -43,7 +49,7 @@ class CommentsController < ApplicationController
 
   # DELETE /comments/1 or /comments/1.json
   def destroy
-    find_post
+    # find_post
     @comment = @post.comments.find(params[:id])
     respond_to do |format|
       if @comment.destroy
