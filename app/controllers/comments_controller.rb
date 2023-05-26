@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
- 
   before_action :find_user, only: %i[index create]
   before_action :find_post, only: %i[index create destroy]
 
